@@ -1,14 +1,15 @@
 import Container from "./Container";
 import Logo from "./Logo";
+import NavMenu from "./NavMenu";
 
 const Navbar = () => {
   return (
     <nav>
       <Container>
-        <div>
+        <div className="flex items-center justify-between my-7">
           <Logo />
-          {/* navbabutton  */}
-          {/* navadmin  */}
+          <NavMenu />
+          <div>others</div>
         </div>
       </Container>
     </nav>
