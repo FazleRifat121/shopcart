@@ -17,7 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body cz-shortcut-listen="false" className="font-poppins antialiased">
+      <body
+        cz-shortcut-listen="false"
+        className="font-poppins antialiased overflow-hidden"
+      >
         <Navbar />
         {children}
         <Footer />
