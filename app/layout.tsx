@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "ShopCart",
@@ -16,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body cz-shortcut-listen="false" className="font-poppins antialiased">
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
