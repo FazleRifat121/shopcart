@@ -13,7 +13,10 @@ const MobileMenu = () => {
           onClick={() => setSideMenuOpen(!sideMenuOpen)}
         />
         <div className="md:hidden">
-          <SideBarMenu isOpen={sideMenuOpen} onClose={setSideMenuOpen(false)} />
+          <SideBarMenu
+            isOpen={sideMenuOpen}
+            onClose={() => setSideMenuOpen(false)}
+          />
         </div>
       </button>
     </>
