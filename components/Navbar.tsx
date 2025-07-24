@@ -1,3 +1,4 @@
+import { currentUser } from "@clerk/nextjs/server";
 import CartIcon from "./CartIcon";
 import Container from "./Container";
 import FavButton from "./FavButton";
@@ -6,8 +7,10 @@ import MobileMenu from "./MobileMenu";
 import NavMenu from "./NavMenu";
 import SearchBar from "./SearchBar";
 import SignIn from "./SignIn";
+import { ClerkLoaded, SignedIn, UserButton } from "@clerk/nextjs";
 
-const Navbar = () => {
+const Navbar = async () => {
+  const user = await currentUser();
   return (
     <nav>
       <Container>
@@ -21,7 +24,12 @@ const Navbar = () => {
             <SearchBar />
             <CartIcon />
             <FavButton />
-            <SignIn />
+            <ClerkLoaded>
+              <SignedIn>
+                <UserButton />
+              </SignedIn>
+              {!user && <SignIn />}
+            </ClerkLoaded>
           </div>
         </div>
       </Container>

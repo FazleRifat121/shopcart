@@ -12,13 +12,13 @@ const MobileMenu = () => {
           className="hover:text-darkColor hoverEffect md:hidden md:gap-0"
           onClick={() => setSideMenuOpen(!sideMenuOpen)}
         />
-        <div className="md:hidden">
-          <SideBarMenu
-            isOpen={sideMenuOpen}
-            onClose={() => setSideMenuOpen(false)}
-          />
-        </div>
       </button>
+      <div className="md:hidden">
+        <SideBarMenu
+          isOpen={sideMenuOpen}
+          onClose={() => setSideMenuOpen(false)}
+        />
+      </div>
     </>
   );
 };
