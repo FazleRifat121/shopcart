@@ -23,9 +23,13 @@ export default function RootLayout({
           cz-shortcut-listen="false"
           className="font-poppins antialiased overflow-hidden"
         >
-          <Navbar />
-          {children}
-          <Footer />
+          <div className="flex flex-col min-h-screen">
+            <main className="flex-1">
+              <Navbar />
+              {children}
+            </main>
+            <Footer />
+          </div>
         </body>
       </html>
     </ClerkProvider>
